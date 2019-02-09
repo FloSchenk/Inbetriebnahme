@@ -1,11 +1,5 @@
-mat-form-field {
-  width: 90%;
-  margin-left: 5%;
-  padding-top: 1em;
-}
-
 .mat-elevation-z8 {
-   box-shadow: 0 3px 5px -3px rgba(0,0,0,.2),0 -3px 5px -3px rgba(0,0,0,.2);
+  box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.2), -1px -3px 2px -3px rgba(0, 0, 0, 0.2);
 }
 
 table {
@@ -89,25 +83,77 @@ mat-paginator{
   max-height: 95px;
   z-index: 900;
 }
+
+td.detail.mat-cell {
+  padding: 0px;
+}
+
 @media (max-width: 455px) {
   .example-container {
     max-height: calc(100vh - 185px);
     overflow: auto;
   }
+  .mat-raised-button{
+    display: block;
+    min-width: 80%;
+    margin: 0px auto 21px;
+  }
+  mat-form-field {
+    display: block;
+    width: 80%;
+    margin: 0px auto 0px;
+    padding-top: 1em;
+  }
 }
+
+
 @media (min-width: 455px) {
   .example-container {
     max-height: calc(100vh - 194px);
     overflow: auto;
   }
+  .mat-raised-button{
+    display: block;
+    min-width: 80%;
+    margin: 0px auto 21px;
+  }
+  mat-form-field {
+    display: block;
+    width: 80%;
+    margin: 0px auto 0px;
+    padding-top: 1em;
+  }
 }
+
+
 @media (min-width: 600px) {
+  mat-form-field {
+    display: inline-block;
+    width: 70%;
+    margin-left: calc(15% - 77px);
+    padding-top: 1em;
+  }
+
   .example-container {
     max-height: calc(100vh - 202px);
     overflow: auto;
   }
+  .mat-raised-button{
+    display: inline-block;
+      position: relative;
+      margin-left: 23px;
+      margin-right: calc(15% - 77px);
+      margin-bottom: 9px;
+      height: 32px;
+      min-width: 130px;
+      right: 0px;
+      margin-bottom: 21px;
+  }
 }
 
-td.detail.mat-cell {
-  padding: 0px;
+.mat-expansion-panel{
+  margin-top: 8px;
+}
+mat-expansion-panel.mat-expansion-panel.ng-tns-c9-3.mat-expanded.mat-expansion-panel-spacing {
+  margin-top: 8px;
 }

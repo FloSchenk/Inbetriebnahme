@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="example-toolbar">
+  <mat-toolbar-row>
+    <h1 class="example-app-name">Login</h1>
+    <span class="example-spacer"></span>
+    <img class="logo" src='./assets/wamas_logo_white.png'>
+  </mat-toolbar-row>
+</mat-toolbar>
+  <mat-card>
+    <mat-form-field>
+      <input matInput placeholder="Enter Name"  (keydown)="keyDownFunction($event, name.value, password.value)" required #name>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Enter Password" (keydown)="keyDownFunction($event, name.value, password.value)" type="password"  required #password>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="login(name.value, password.value)">Login</button>
+  </mat-card>

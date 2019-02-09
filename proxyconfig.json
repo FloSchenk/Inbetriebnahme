@@ -1,6 +1,6 @@
 {
   "/query": {
-    "target": "http://localhost:9987/graphql",
+    "target": "http://172.26.88.8:9987/graphql",
     "secure": false,
     "changeOrigin": true
   }

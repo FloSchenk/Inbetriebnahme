@@ -1,3 +1,28 @@
-<p>
-  dashboard works!
-</p>
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight" [gutterSize]="gutterSize" (window:resize)="onResize($event)">
+  <mat-grid-tile *ngFor="let fav of favorites" [attr.size]="cols | dashboardGridSize">
+      <mat-grid-tile-header>
+        <img [src]="fav.icon">
+        {{fav.name}}
+        <span class="example-spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>keyboard_arrow_up</mat-icon>
+              <span>Move Up</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>keyboard_arrow_down</mat-icon>
+              <span>Move Down</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>remove_circle</mat-icon>
+              <span>Remove from Dashboard</span>
+            </button>
+          </mat-menu>
+      </mat-grid-tile-header>
+      {{fav.content}}
+    </mat-grid-tile>
+
+</mat-grid-list>

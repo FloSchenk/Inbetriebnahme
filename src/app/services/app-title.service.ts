@@ -1,18 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 
 @Injectable()
 export class AppTitleService {
 
   appTitle: String;
 
+  @Output() isDetailsView = new EventEmitter<boolean>();
+  @Output() title = new EventEmitter<string>();
+
   constructor() { }
 
-  getAppTitle(): String {
-    return this.appTitle;
+  setAppTitle(appTitle: string): void {
+    this.title.emit(appTitle);
   }
 
-  setAppTitle(title: String): void {
-    this.appTitle = title;
+  setDetailsView(detailsView: boolean): void {
+    this.isDetailsView.emit(detailsView);
   }
 
 }
